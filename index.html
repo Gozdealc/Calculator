@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Calculator</title>
+  <meta name="description" content="Simple Calculator With Dark Mode." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+  integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <!-- Ekran Alanı -->
+      <div class="screen-row">
+        <input type="text" name="result" id="display" placeholder="0" readonly />
+      </div>
+
+      <!-- Temizleme Butonu -->
+      <div class="clear-row">
+        <button class="clear" onclick="clearDisplay('all')">C</button>
+        <button class="clear" onclick="clearDisplay('last')">
+            <i class="fa-solid fa-delete-left fa-flip-vertical fa-xl"></i>
+        </button>
+      </div>
+
+      <!-- Butonlar -->
+      <div class="button-row">
+        <button class="button number">1</button>
+        <button class="button number">2</button>
+        <button class="button number">3</button>
+        <button class="button operator" data-operator="+">+</button>
+      </div>
+      <div class="button-row">
+        <button class="button number">4</button>
+        <button class="button number">5</button>
+        <button class="button number">6</button>
+        <button class="button operator" data-operator="-">-</button>
+      </div>
+      <div class="button-row">
+        <button class="button number">7</button>
+        <button class="button number">8</button>
+        <button class="button number">9</button>
+        <button class="button operator" data-operator="*">×</button>
+      </div>
+      <div class="button-row">
+        <button class="button operator" data-operator="/">÷</button>
+        <button class="button number">0</button>
+        <button class="button decimal">.</button>
+        <button class="button equals" onclick="calculate()">=</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
